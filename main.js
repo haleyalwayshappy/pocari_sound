@@ -91,8 +91,24 @@ document.getElementById('secondDot').addEventListener('click', currentImageSlide
 document.getElementById('thirdDot').addEventListener('click', currentImageSlide.bind(null, 3));
 document.getElementById('forthDot').addEventListener('click', currentImageSlide.bind(null, 4));
 document.getElementById('fifthDot').addEventListener('click', currentImageSlide.bind(null, 5));
+document.getElementById('sixthDot').addEventListener('click', currentImageSlide.bind(null, 6));
+document.getElementById('seventhDot').addEventListener('click', currentImageSlide.bind(null, 7));
 
 /* PORTFOLIO SECTION */
+
+var initialDisplayCount = 4;  // 처음에 보여줄 요소의 개수
+var moreItems;  // 추가로 보여줄 요소들
+
+function toggleVisibility() {
+  for (var i = initialDisplayCount; i < moreItems.length; i++) {
+    if (moreItems[i].style.display === 'none') {
+      moreItems[i].style.display = 'inline-block';  // 더 보이기
+    } else {
+      moreItems[i].style.display = 'none';  // 숨기기
+    }
+  }
+}
+
 filterSelection('all');
 
 function filterSelection(id) {
@@ -104,6 +120,9 @@ function filterSelection(id) {
 
   addClass(document.getElementById(id), 'active');
 
+  if(filterItems > initialDisplayCount){
+    // 4개의 화면만 보여주기 
+  }
   x = document.getElementsByClassName('filterItem');
   if (id == 'all') id = '';
   for (i = 0; i < x.length; i++) {
@@ -130,6 +149,10 @@ function removeClass(element, name) {
 }
 
 document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
+document.getElementById('enterprise').addEventListener('click', filterSelection.bind(null, 'enterprise'));
+document.getElementById('product').addEventListener('click', filterSelection.bind(null, 'product'));
+document.getElementById('vlog').addEventListener('click', filterSelection.bind(null, 'vlog'));
+
 
 function viewPortfolio(event) {
   var polyNode = event.target;
@@ -140,19 +163,18 @@ function viewPortfolio(event) {
 
   var overlayNode = polyNode;
   var imageNode = overlayNode.nextElementSibling;
-
   var itemNode = overlayNode.parentNode;
   var mainNode = itemNode.nextElementSibling;
   var subNode = mainNode.nextElementSibling;
   var textNode = subNode.nextElementSibling;
 
-console.log(imageNode);
+  console.log(imageNode);
 
-document.getElementById('modalImage').src= imageNode.src;
+  // document.getElementById('modalImage').src= imageNode.src;
   document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
   document.getElementById('modalSub').innerHTML = subNode.innerHTML;
   document.getElementById('modalText').innerHTML = textNode.innerHTML;
-   
+    
   document.getElementById('portfolioModal').style.display='block';
 }
 
@@ -165,73 +187,6 @@ var filterItems = document.getElementsByClassName('overlay');
 
 for (var i = 0; i < filterItems.length; i++) {
   filterItems[i].addEventListener('click', viewPortfolio);
-}
-
-
-
-
-
-//모달 페이지 포트폴리오 기능 (문제가 많아서 수정해야할것도 많은데 일단 디폴트 값으로)
-/**
-function viewPortfolio(event) {
-  var polyNode = event.target;
-  if (polyNode.tagName.toLowerCase() == 'i') {
-    polyNode = polyNode.parentNode;
-  }
-
-  var overlayNode = polyNode;
-  var itemNode = overlayNode.parentNode;
-  var videoNode = itemNode.nextElementSibling;
-  var mainNode = videoNode.nextElementSibling;
-  var subNode = mainNode.nextElementSibling;
-  var textNode = subNode.nextElementSibling;
-
-// 동영상이 있을때는 모달 페이지에 동영상이 들어가고 동영상이 없으면 이미지만 출력되게 하는 코드를 작성해야함 
-
-
-  document.getElementById('modalVideo').innerHTML= videoNode.innerHTML;
-  document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
-  document.getElementById('modalSub').innerHTML = subNode.innerHTML;
-  document.getElementById('modalText').innerHTML = textNode.innerHTML;
- 
- 
-  document.getElementById('portfolioModal').style.display = 'block';
-
-}
-$('#modalClose').on('click', function(){ //레이어 닫을때
-    $('#portfolioModal').hide();
-    $('#modalVideo').empty();  
-});
-**/
-
-function viewPortfolio(event) {
-  var polyNode = event.target;
-
-  if (polyNode.tagName.toLowerCase() == 'i') {
-    polyNode = polyNode.parentNode;
-  }
-
-  var overlayNode = polyNode;
-  var videoNode = overlayNode.nextElementSibling;
-
-  var itemNode = overlayNode.parentNode;
-  var mainNode = itemNode.nextElementSibling;
-  var subNode = mainNode.nextElementSibling;
-  var textNode = subNode.nextElementSibling;
-
-  document.getElementById('modalVideo').src = videoNode.src;
-  document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
-  document.getElementById('modalSub').innerHTML = subNode.innerHTML;
-  document.getElementById('modalText').innerHTML = textNode.innerHTML;
-
- document.getElementById('portfolioModal').style.display='block';
-console.log(overlayNode);
-
- $('#modalClose').on('click', function(){ //레이어 닫을때
-  $('#portfolioModal').hide();
-  $('#modalVideo').empty();  
-});
-
 }
 
 

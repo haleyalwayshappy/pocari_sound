@@ -122,11 +122,13 @@ tr,th,td {
   cursor: pointer;
   font-weight:700;
   color:#333;
+  width: 200px;
 }
 
 .navbar-brand>img {
   padding-top: 10px;
-  width: 25%;
+  /* height: 20%; */
+  width: 100%;
 }
 .header-area>.navbar>.navbar-toggler * {
   font-size: 32px;
@@ -215,7 +217,7 @@ tr,th,td {
 /* intro area */
 /* SECTION CONTAINER */
 .section-container {
-  max-width: 90%;
+  max-width: 1200px;
   
   margin: 0 auto;
 }
@@ -341,12 +343,12 @@ section {
 
 }
 
-/* about area */
+/* service area */
 .about-area{
   height: auto;
 }
 .about-area .icon{
-  width: 50%; /* 아이콘의 너비를 50%로 설정 */
+  width: 40%; /* 아이콘의 너비를 50%로 설정 */
   height: auto; /* 높이는 자동으로 조정 (비율 유지) */
 }
 
@@ -358,7 +360,7 @@ section {
 }
 
 .contents{
-  width: 300px;
+  width: 280px;
   height :400px;
   /* background-color: lightblue; */
   color:#333;
@@ -376,14 +378,14 @@ section {
 }
 .contents p{
   font-weight: bold;
-  font-size: 48px;
+  font-size: 32px;
   align-items: center;
   text-align: center;
 }
 
 .text .details{
   font-weight: normal;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .icon i {
@@ -396,8 +398,9 @@ section {
 /*price area*/
 
 .price-area {
-  min-width: 80%;
+  min-width: 60%;
   padding: 20px;
+  
   /* background-color: #f5f5f5; */
   text-align: center;
 }
@@ -409,7 +412,7 @@ section {
 
 .price-table{
   width : 100%;
-  margin:20px 0 40px 0;
+  padding:20px 40px;
 
 }
 .price-table th, .price-table td{
@@ -443,7 +446,10 @@ section {
 /* PORTFOLIO AREA */
 
 .portfolio-area {
-  height: auto;
+  min-width: 80%;
+  /* padding: 20px; */
+  /* background-color: #f5f5f5; */
+  text-align: center;
 }
 
 .portfolio-area>.filter>.list {
@@ -456,6 +462,7 @@ section {
   padding: 0 20px;
   font-size: 16px;
   cursor: pointer;
+  
 }
 
 .portfolio-area>.filter>.list>.listItem:hover,
@@ -469,9 +476,8 @@ section {
 
 .portfolio-area>.container>.filterItem {
   display: none;
-
   width: calc(100%-40px);
-  margin: 20px;
+  margin:0  20px;
   text-align: center;
 }
 
@@ -483,6 +489,10 @@ section {
 
 .portfolio-area>.container>.filterItem.show {
   display: inline-block;
+}
+
+.portfolio-area>.container>.filterItem.hide {
+  display: none;
 }
 
 .portfolio-area>.container>.filterItem>.image {
@@ -511,7 +521,6 @@ section {
 .portfolio-area>.container>.filterItem>.image:hover>.overlay {
   background-image: linear-gradient(to left,
   #94D4F1,#2DA5E1);
-
   opacity: 0.5;
 }
 
@@ -580,7 +589,7 @@ section {
 #portfolioModal>.container {
   width: 100%;
   height: auto;
-  overflow:scroll;
+  overflow:hi;
   
 }
 
