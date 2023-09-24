@@ -204,35 +204,35 @@ $('#modalClose').on('click', function(){ //레이어 닫을때
 });
 **/
 
-// function viewPortfolio(event) {
-//   var polyNode = event.target;
+function viewPortfolio(event) {
+  var polyNode = event.target;
 
-//   if (polyNode.tagName.toLowerCase() == 'i') {
-//     polyNode = polyNode.parentNode;
-//   }
+  if (polyNode.tagName.toLowerCase() == 'i') {
+    polyNode = polyNode.parentNode;
+  }
 
-//   var overlayNode = polyNode;
-//   var videoNode = overlayNode.nextElementSibling;
+  var overlayNode = polyNode;
+  var videoNode = overlayNode.nextElementSibling;
 
-//   var itemNode = overlayNode.parentNode;
-//   var mainNode = itemNode.nextElementSibling;
-//   var subNode = mainNode.nextElementSibling;
-//   var textNode = subNode.nextElementSibling;
+  var itemNode = overlayNode.parentNode;
+  var mainNode = itemNode.nextElementSibling;
+  var subNode = mainNode.nextElementSibling;
+  var textNode = subNode.nextElementSibling;
 
-//   document.getElementById('modalVideo').src = videoNode.src;
-//   document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
-//   document.getElementById('modalSub').innerHTML = subNode.innerHTML;
-//   document.getElementById('modalText').innerHTML = textNode.innerHTML;
+  document.getElementById('modalVideo').src = videoNode.src;
+  document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
+  document.getElementById('modalSub').innerHTML = subNode.innerHTML;
+  document.getElementById('modalText').innerHTML = textNode.innerHTML;
 
-//  document.getElementById('portfolioModal').style.display='block';
-// console.log(overlayNode);
+ document.getElementById('portfolioModal').style.display='block';
+console.log(overlayNode);
 
-//  $('#modalClose').on('click', function(){ //레이어 닫을때
-//   $('#portfolioModal').hide();
-//   $('#modalVideo').empty();  
-// });
+ $('#modalClose').on('click', function(){ //레이어 닫을때
+  $('#portfolioModal').hide();
+  $('#modalVideo').empty();  
+});
 
-// }
+}
 
 
 
