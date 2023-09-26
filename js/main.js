@@ -148,10 +148,82 @@ function removeClass(element, name) {
   element.className = arr.join(" ");
 }
 
-document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
-document.getElementById('enterprise').addEventListener('click', filterSelection.bind(null, 'enterprise'));
-document.getElementById('product').addEventListener('click', filterSelection.bind(null, 'product'));
-document.getElementById('vlog').addEventListener('click', filterSelection.bind(null, 'vlog'));
+function hideElements(element) {
+
+  var subEnterpriseElements = document.querySelector('.sub-enterprise');
+  var subProductElements = document.querySelector('.sub-product');
+  var subVlogElements = document.querySelector('.sub-vlog');
+
+  subEnterpriseElements.style.display = 'display';
+  subProductElements.style.display = 'display';
+  subVlogElements.style.display = 'display';
+
+  console.log(element);
+// console.log("subEnterpriseElements", subEnterpriseElements.className);
+// console.log("subVlogElements", subVlogElements.className);
+// console.log("subProductElements", subProductElements.className);
+
+  if(element == subEnterpriseElements.className) {
+    subEnterpriseElements.style.display = 'display';
+    subProductElements.style.display = 'none';
+    subVlogElements.style.display = 'none';
+  }else if(element == subProductElements.className) {
+    subEnterpriseElements.style.display = 'none';
+    subProductElements.style.display = 'display';
+    subVlogElements.style.display = 'none';
+  }else if(element == subVlogElements.className) {
+    subEnterpriseElements.style.display = 'none';
+    subProductElements.style.display = 'none';
+    subVlogElements.style.display = 'display';
+  }else{
+    subEnterpriseElements.style.display = 'display';
+    subProductElements.style.display = 'display';
+    subVlogElements.style.display = 'display';
+  
+  }
+
+
+
+}
+
+var subEnterpriseElements = document.querySelector('.sub-enterprise');
+var subProductElements = document.querySelector('.sub-product');
+var subVlogElements = document.querySelector('.sub-vlog');
+
+document.getElementById('all').addEventListener('click', function() {
+  filterSelection('all');
+  subEnterpriseElements.style.display = 'display';
+  subProductElements.style.display = 'display';
+  subVlogElements.style.display = 'display';
+  
+});
+document.getElementById('enterprise').addEventListener('click', function() {
+  filterSelection('enterprise');
+  subEnterpriseElements.style.display = 'display';
+  subProductElements.style.display = 'none';
+  subVlogElements.style.display = 'hide';
+  // hideElements('sub-container sub-enterprise');
+  
+});
+
+document.getElementById('product').addEventListener('click', function() {
+  filterSelection('product');
+  subEnterpriseElements.style.display = 'hide';
+  subProductElements.style.display = 'hide';
+  subVlogElements.style.display = 'display';
+  // hideElements('sub-container sub-product');
+
+ });
+
+document.getElementById('vlog').addEventListener('click', function() {
+  filterSelection('vlog');
+  subEnterpriseElements.style.display = 'hide';
+  subProductElements.style.display = 'hide';
+  subVlogElements.style.display = 'display';
+  // hideElements('sub-container sub-vlog');
+ 
+});
+
 
 
 function viewPortfolio(event) {

@@ -30,8 +30,8 @@
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
 
   <!-- user style  -->
-  <link rel="stylesheet" href="./home.css" />
-  <link rel="stylesheet" href="./icon.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="stylesheet" href="./css/icon.css" />
   
 
   <!-- jquery -->
@@ -190,7 +190,7 @@
     <!-- 포트폴리오 섹션 -->
 
     <section class="portfolio-area" id="portfolio">
-      <div class="title">PORTFOLIO</div>
+      <div class="title"><a href="./portfolio.html">PORTFOLIO</a></div>
       
       <div class="filter">
         <ul class="list">
@@ -203,9 +203,8 @@
 
       <div class="container">
 
-        <div class="category enterprise">
-          기업홍보 
-        </div>
+        <div class="sub-container sub-enterprise">   
+        <div class="category">기업홍보</div>
 
         <div class="filterItem enterprise" >
           <div class="image">
@@ -215,13 +214,11 @@
           <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/EwZhZZb1Cv4?si=9kC_djCrPMpFf0Wf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <div class="main">
-            벤틀리
-          </div>
+          <div class="main">벤틀리</div>
           <div class="sub">벤틀리 기업홍보영상</div>
           <div class="text">텍스트 상세설명 </div>
         </div>
- 
+
         <div class="filterItem enterprise" >
           <div class="image">
             <div class="overlay"></div>
@@ -230,9 +227,7 @@
           <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/AjFtAfcBY3k?si=zeJfhyRNCwsW77GL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <div class="main">
-            스몹
-          </div>
+          <div class="main">스몹</div>
           <div class="sub">스몹 기업홍보영상</div>
           <div class="text">텍스트 상세설명 </div>
         </div>
@@ -244,9 +239,7 @@
           </div>
           <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/LfLMngsTvL8?si=n2bk6ZfUI3giyDWF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
-          <div class="main">
-            세라젬
-          </div>
+          <div class="main">세라젬</div>
           <div class="sub">세라젬 기업홍보영상</div>
           <div class="text">텍스트 상세설명 </div>
         </div>
@@ -259,137 +252,127 @@
           <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/-v3Mf7pJgvU?si=YEsYrX8ru6d7LEr3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
- 
-          <div class="main">
-            삼성전기
-          </div>
+          <div class="main">삼성전기</div>
           <div class="sub">삼성 전기 역사관 투어</div>
           <div class="text">텍스트 상세설명 </div>
+          </div>
+          <div class="sub-category" id="more_product"> 기업홍보 더 보기 </div>
         </div>
 
-        <div class="filterItem product" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/product/carrot_01.jpg" alt="당근비즈니스">
+        <div class="sub-container sub-product">    
+          <div class="category">제품 홍보</div>
+          <div class="filterItem product" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/product/carrot_01.jpg" alt="당근비즈니스">
+            </div>
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/N0sCtAptYls?si=gAq5k50Pt-SG_v_C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+            </div>
+            <div class="main">당근 비즈니스</div>
+            <div class="sub">과몰입금지 인터렉티브형 영상 사운드 제작 </div>
+            <div class="text">텍스트 상세설명 </div>
           </div>
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/N0sCtAptYls?si=gAq5k50Pt-SG_v_C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
-          </div>
-          <div class="main">
-            당근 비즈니스
-          </div>
-          <div class="sub">과몰입금지 인터렉티브형 영상 사운드 제작 </div>
-          <div class="text">텍스트 상세설명 </div>
-        </div>
 
-        <div class="filterItem product" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/product/ragnarok.jpg" alt="라그나로크">
+          <div class="filterItem product" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/product/ragnarok.jpg" alt="라그나로크">
+            </div>
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/oM1mucxwy48?si=IKRZ4S_7vjCGK6vq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main">라그나로크</div>
+            <div class="sub">라그나로크</div>
+            <div class="text">텍스트 상세설명</div>
           </div>
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oM1mucxwy48?si=IKRZ4S_7vjCGK6vq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="main">
-            라그나로크
-          </div>
-          <div class="sub">라그나로크 </div>
-          <div class="text">텍스트 상세설명 </div>
-        </div>
 
-        <div class="filterItem product" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/product/ssangyoung_platinum01.jpg" alt="쌍용건설">
-          </div>
-          <div class="video">
+          <div class="filterItem product" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/product/ssangyoung_platinum01.jpg" alt="쌍용건설">
+            </div>
+            <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/I26u_Oyk_Zk?si=0wdaLiaHtfRyLjNV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main">쌍용건설</div>
+            <div class="sub">쌍용건설 </div>
+            <div class="text">텍스트 상세설명 </div>
           </div>
-          <div class="main">
-            쌍용건설
-          </div>
-          <div class="sub">쌍용건설 </div>
-          <div class="text">텍스트 상세설명 </div>
-        </div>
 
-        <div class="filterItem product" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/product/korea_tuja.jpg" alt="한국투자증권">
-          </div>
-          <div class="video">
+          <div class="filterItem product" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/product/korea_tuja.jpg" alt="한국투자증권">
+            </div>
+            <div class="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QCh6U39jtzw?si=5PVD7zGboP13dj_J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main">한국투자증권</div>
+            <div class="sub">한국투자증권 제품홍보 </div>
+            <div class="text">텍스트 상세설명 </div>
           </div>
-          <div class="main">
-            한국투자증권
-          </div>
-          <div class="sub">한국투자증권 제품홍보 </div>
-          <div class="text">텍스트 상세설명 </div>
+          <div class="sub-category" id="more_product"> 제품홍보 더 보기 </div>
         </div>
 
-        <div class="filterItem vlog" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/vlog/pilip_morris.jpg" alt="필립모리스">
+        <div class="sub-container sub-vlog">   
+          <div class="category">V-Log</div>
+          <div class="filterItem vlog" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/vlog/pilip_morris.jpg" alt="필립모리스">
+              </div>
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/b6c_jmT7olk?si=0jLZX_f7vojVoCvj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main">필립모리스</div>
+            <div class="sub">필립모리스 </div>
+            <div class="text">텍스트 상세설명 </div>
           </div>
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/b6c_jmT7olk?si=0jLZX_f7vojVoCvj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="main">
-            필립모리스
-          </div>
-          <div class="sub">필립모리스 </div>
-          <div class="text">텍스트 상세설명 </div>
-        </div>
 
-        <div class="filterItem vlog" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/vlog/doyouwant_developer.jpg" alt="EBS개발자">
+          <div class="filterItem vlog" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/vlog/doyouwant_developer.jpg" alt="EBS개발자">
+            </div>
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/J9oKmTzjmIE?si=NdzByguNQ32-A0kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main">개발자가 되고싶니</div>
+            <div class="sub">EBS </div>
+            <div class="text">텍스트 상세설명 </div>
           </div>
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/J9oKmTzjmIE?si=NdzByguNQ32-A0kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="main">
-            개발자가 되고싶니
-          </div>
-          <div class="sub">EBS </div>
-          <div class="text">텍스트 상세설명 </div>
-        </div>
 
-        <div class="filterItem vlog" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/vlog/asan_hospital.jpg" alt="아산병원vlog">
+          <div class="filterItem vlog" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/vlog/asan_hospital.jpg" alt="아산병원vlog">
+            </div>
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/1ICw32Gth64?si=63XW4Nwo6BMNCChM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main">아산병원</div>
+            <div class="sub">아산병원- 챗 gpt 어쩌고 </div>
+            <div class="text">텍스트 상세설명 </div>
           </div>
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ICw32Gth64?si=63XW4Nwo6BMNCChM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="main">
-            아산병원
-          </div>
-          <div class="sub">아산병원- 챗 gpt 어쩌고 </div>
-          <div class="text">텍스트 상세설명 </div>
-        </div>
 
-        <div class="filterItem vlog" >
-          <div class="image">
-            <div class="overlay"></div>
-            <img src="./asset/portfolio/vlog/samsung_ourspring.jpg" alt="삼성전기">
+          <div class="filterItem vlog" >
+            <div class="image">
+              <div class="overlay"></div>
+              <img src="./asset/portfolio/vlog/samsung_ourspring.jpg" alt="삼성전기">
+            </div>
+            <div class="video">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/c_8sbNOw89g?si=KlLS3bANygCZDd2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="main">삼성전기</div>
+            <div class="sub">삼성전기- 너와나의 봄 </div>
+            <div class="text">텍스트 상세설명 </div>
           </div>
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/c_8sbNOw89g?si=KlLS3bANygCZDd2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <div class="main">
-            삼성전기
-          </div>
-          <div class="sub">삼성전기- 너와나의 봄 </div>
-          <div class="text">텍스트 상세설명 </div>
+          <div class="sub-category" id="more_product"> V-Log 더 보기 </div>
         </div>
 
       </div>
 
-      <a href="./portfolio.html" id="moreButton" onclick="toggleVisibility()">더 보기</a> 
 
     </section>
     <!-- contact area -->
@@ -404,8 +387,8 @@
 
           <div class="content">
             <p>김경환</p>
-            <p>010-8834-9464</p>
-            <a href="mailto:hongniest@gmail.com" target="_blank"> hongniest@gmail.com</a>
+            <p style="display: none;">010-8834-9464</p>
+            <a href="mailto:hongniest@gmail.com" target="_blank" style="display: none;"> hongniest@gmail.com</a>
 
             <p>문의사항은 메일 바랍니다 :-)</p>
           </div>
@@ -448,7 +431,7 @@
 
 
   <!-- user script -->
-  <script src="./main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
