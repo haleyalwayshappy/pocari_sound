@@ -42,7 +42,7 @@
 <body>
   <header class="header-area navbar-fade" id="header">
     <nav class="navbar">
-      <a class="navbar-brand" href="./index.html"><img src="./asset/logo_pocari2.png" alt="pocari sound"> </a>
+      <a class="navbar-brand" href="./index.html"><img src="./asset/vertical_logo.png" alt="pocari sound"> </a>
       <a class="navbar-toggler" id="toggleBtn"><i class="fa fa-bars"></i></a>
       <div class="navbar-menu" id="menu">
         <div class="nav-item">
@@ -109,7 +109,10 @@
           </div>
           <div class="text">
             <p>사운드 믹싱</p>
-            <p class="details">BGM <br> 효과음 <br> 노이즈제거 <br> 사운드 밸런스 믹싱 </p>
+            <p class="details">BGM </p>
+            <p class="details">효과음</p>
+            <p class="details">노이즈제거</p>
+            <p class="details">사운드 밸런스 믹싱</p>
           </div>
         </div>
   
@@ -120,7 +123,10 @@
           </div>
           <div class="text">
             <p>사운드 녹음</p>
-            <p class="details">성우 녹음 <br> 성우 섭외 및 리스트 샘플 제공 <br> 악기 녹음 <br> 송 녹음 </p>
+            <p class="details">성우 녹음</p>
+            <p class="details">성우 섭외 및 리스트 샘플 제공</p>
+            <p class="details">악기 녹음</p>
+            <p class="details">송 녹음 </p>
           </div>      
         </div>
   
@@ -130,14 +136,12 @@
           </div>
           <div class="text">
             <p>사운드 제작</p>
-            <p class="details">징글 <br> 라디오 cm송 <br> 브랜드 로고 사운드 </p>
+            <p class="details">징글</p>
+            <p class="details">라디오 cm송</p>
+            <p class="details">브랜드 로고 사운드</p>
           </div>
         </div>
-
-
       </div>
-          
-  
     </section>
 
     <section class="price-area" id="price">
@@ -203,7 +207,7 @@
 
       <div class="container">
 
-        <div class="sub-container sub-enterprise">   
+        <div class="sub-container enterprise" id="sub-enterprise">   
         <div class="category">기업홍보</div>
 
         <div class="filterItem enterprise" >
@@ -225,14 +229,14 @@
             <img src="./asset/portfolio/enterprise/smob.jpg" alt="스몹">
           </div>
           <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/AjFtAfcBY3k?si=zeJfhyRNCwsW77GL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="300" height="100%" src="https://www.youtube.com/embed/AjFtAfcBY3k?si=zeJfhyRNCwsW77GL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <div class="main">스몹</div>
           <div class="sub">스몹 기업홍보영상</div>
           <div class="text">텍스트 상세설명 </div>
         </div>
 
-        <div class="filterItem enterprise " >
+        <div class="filterItem enterprise" >
           <div class="image">
             <div class="overlay"></div>
             <img src="./asset/portfolio/enterprise/seragem.jpg" alt="세라젬">
@@ -259,7 +263,7 @@
           <div class="sub-category" id="more_product"> 기업홍보 더 보기 </div>
         </div>
 
-        <div class="sub-container sub-product">    
+        <div class="sub-container product" id="sub-product">    
           <div class="category">제품 홍보</div>
           <div class="filterItem product" >
             <div class="image">
@@ -315,7 +319,7 @@
           <div class="sub-category" id="more_product"> 제품홍보 더 보기 </div>
         </div>
 
-        <div class="sub-container sub-vlog">   
+        <div class="sub-container vlog" id="sub-vlog">   
           <div class="category">V-Log</div>
           <div class="filterItem vlog" >
             <div class="image">
@@ -418,11 +422,9 @@
   <div id="portfolioModal" class="modal">
     <span class="close" id="modalClose">&times;</span>
     <div class="container">
-      <div id="modalVideo">video</div> 
-      <img id="modalImage" style="display: none;" />
-
-      <div id="modalMain" class="modal-main">main     
-      </div>
+      <div id="modalVideo" >video</div> 
+      <img id="modalImage" style="display: none;"/>
+      <div id="modalMain" class="modal-main">main</div>
       <div id="modalSub" class="modal-sub">sub</div>
       <div id="modalText" class="modal-text">text</div>
     </div>

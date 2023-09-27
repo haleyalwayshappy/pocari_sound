@@ -96,135 +96,108 @@ document.getElementById('seventhDot').addEventListener('click', currentImageSlid
 
 /* PORTFOLIO SECTION */
 
-var initialDisplayCount = 4;  // 처음에 보여줄 요소의 개수
-var moreItems;  // 추가로 보여줄 요소들
-
-function toggleVisibility() {
-  for (var i = initialDisplayCount; i < moreItems.length; i++) {
-    if (moreItems[i].style.display === 'none') {
-      moreItems[i].style.display = 'inline-block';  // 더 보이기
-    } else {
-      moreItems[i].style.display = 'none';  // 숨기기
-    }
-  }
-}
-
-filterSelection('all');
-
-function filterSelection(id) {
-  var x, i;
-  x = document.getElementsByClassName('listItem');
-  for (i = 0; i < x.length; i++) {
-    removeClass(x[i], 'active');
-  }
-
-  addClass(document.getElementById(id), 'active');
-
-  if(filterItems > initialDisplayCount){
-    // 4개의 화면만 보여주기 
-  }
-  x = document.getElementsByClassName('filterItem');
-  if (id == 'all') id = '';
-  for (i = 0; i < x.length; i++) {
-    removeClass(x[i], 'show');
-    if (x[i].className.indexOf(id) > -1) {
-      addClass(x[i], 'show');
-    }
-  }
-}
-
-function addClass(element, name) {
-  if (element.className.indexOf(name) == -1) {
-    element.className += " " + name;
-  }
-}
-
-function removeClass(element, name) {
-  var arr;
-  arr = element.className.split(" ");
-  while (arr.indexOf(name) > -1) {
-    arr.splice(arr.indexOf(name), 1);
-  }
-  element.className = arr.join(" ");
-}
-
-function hideElements(element) {
-
-  var subEnterpriseElements = document.querySelector('.sub-enterprise');
-  var subProductElements = document.querySelector('.sub-product');
-  var subVlogElements = document.querySelector('.sub-vlog');
-
-  subEnterpriseElements.style.display = 'display';
-  subProductElements.style.display = 'display';
-  subVlogElements.style.display = 'display';
-
-  console.log(element);
-// console.log("subEnterpriseElements", subEnterpriseElements.className);
-// console.log("subVlogElements", subVlogElements.className);
-// console.log("subProductElements", subProductElements.className);
-
-  if(element == subEnterpriseElements.className) {
-    subEnterpriseElements.style.display = 'display';
-    subProductElements.style.display = 'none';
-    subVlogElements.style.display = 'none';
-  }else if(element == subProductElements.className) {
-    subEnterpriseElements.style.display = 'none';
-    subProductElements.style.display = 'display';
-    subVlogElements.style.display = 'none';
-  }else if(element == subVlogElements.className) {
-    subEnterpriseElements.style.display = 'none';
-    subProductElements.style.display = 'none';
-    subVlogElements.style.display = 'display';
-  }else{
-    subEnterpriseElements.style.display = 'display';
-    subProductElements.style.display = 'display';
-    subVlogElements.style.display = 'display';
   
+  var initialDisplayCount = 4;  // 처음에 보여줄 요소의 개수
+  var moreItems;  // 추가로 보여줄 요소들
+  
+  function toggleVisibility() {
+    for (var i = initialDisplayCount; i < moreItems.length; i++) {
+      if (moreItems[i].style.display === 'none') {
+        moreItems[i].style.display = 'inline-block';  // 더 보이기
+      } else {
+        moreItems[i].style.display = 'none';  // 숨기기
+      }
+    }
   }
-
-
-
-}
-
-var subEnterpriseElements = document.querySelector('.sub-enterprise');
-var subProductElements = document.querySelector('.sub-product');
-var subVlogElements = document.querySelector('.sub-vlog');
-
-document.getElementById('all').addEventListener('click', function() {
+  
   filterSelection('all');
-  subEnterpriseElements.style.display = 'display';
-  subProductElements.style.display = 'display';
-  subVlogElements.style.display = 'display';
   
-});
-document.getElementById('enterprise').addEventListener('click', function() {
-  filterSelection('enterprise');
-  subEnterpriseElements.style.display = 'display';
-  subProductElements.style.display = 'none';
-  subVlogElements.style.display = 'hide';
-  // hideElements('sub-container sub-enterprise');
+  function filterSelection(id) {
+    var x, i;
+    x = document.getElementsByClassName('listItem');
+    for (i = 0; i < x.length; i++) {
+      removeClass(x[i], 'active');
+    }
   
-});
+    addClass(document.getElementById(id), 'active');
+  
+    if(filterItems > initialDisplayCount){
+      // 4개의 화면만 보여주기 
+    }
+    x = document.getElementsByClassName('filterItem');
+    if (id == 'all') id = '';
+    for (i = 0; i < x.length; i++) {
+      removeClass(x[i], 'show');
+      if (x[i].className.indexOf(id) > -1) {
+        addClass(x[i], 'show');
+      }
+    }
+  }
+  
+  function addClass(element, name) {
+    if (element.className.indexOf(name) == -1) {
+      element.className += " " + name;
+    }
+  }
+  
+  function removeClass(element, name) {
+    var arr;
+    arr = element.className.split(" ");
+    while (arr.indexOf(name) > -1) {
+      arr.splice(arr.indexOf(name), 1);
+    }
+    element.className = arr.join(" ");
+  }
+  
+  // document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
+  // document.getElementById('enterprise').addEventListener('click', filterSelection.bind(null, 'enterprise'));
+  // document.getElementById('product').addEventListener('click', filterSelection.bind(null, 'product'));
+  // document.getElementById('vlog').addEventListener('click', filterSelection.bind(null, 'vlog'));
+  
 
-document.getElementById('product').addEventListener('click', function() {
-  filterSelection('product');
-  subEnterpriseElements.style.display = 'hide';
-  subProductElements.style.display = 'hide';
-  subVlogElements.style.display = 'display';
-  // hideElements('sub-container sub-product');
-
- });
-
-document.getElementById('vlog').addEventListener('click', function() {
-  filterSelection('vlog');
-  subEnterpriseElements.style.display = 'hide';
-  subProductElements.style.display = 'hide';
-  subVlogElements.style.display = 'display';
-  // hideElements('sub-container sub-vlog');
- 
-});
+  document.getElementById('all').addEventListener('click', function(){
+    filterSelection('all');
+    // Hide all sub-containers
+    document.getElementById('sub-enterprise').style.display = 'block';
+    document.getElementById('sub-product').style.display = 'block';
+    document.getElementById('sub-vlog').style.display = 'block';
+  });
 
 
+  document.getElementById('enterprise').addEventListener('click', function(){
+    // Hide all sub-containers
+    filterSelection('enterprise');
+    document.getElementById('sub-enterprise').style.display = 'block';
+    document.getElementById('sub-product').style.display = 'none';
+    document.getElementById('sub-vlog').style.display = 'none';
+  });
+  
+  
+  document.getElementById('product').addEventListener('click', function(){
+    // Hide all sub-containers
+    filterSelection('product');
+  
+
+    document.getElementById('sub-enterprise').style.display = 'none';
+    document.getElementById('sub-product').style.display = 'block';
+    document.getElementById('sub-vlog').style.display = 'none';
+  });
+  
+  document.getElementById('vlog').addEventListener('click', function(){
+    // Hide all sub-containers
+    filterSelection('vlog');
+
+    document.getElementById('sub-enterprise').style.display = 'none';
+    document.getElementById('sub-product').style.display = 'none';
+    document.getElementById('sub-vlog').style.display = 'block';
+  });
+  
+  
+
+
+
+
+/* 모달 (팝업 버튼 눌렀을때) */
 
 function viewPortfolio(event) {
   var polyNode = event.target;
