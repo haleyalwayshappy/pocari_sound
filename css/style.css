@@ -77,9 +77,10 @@ body {
   display: flex;
 }
 
-.intro-title a {
+.intro-title a img {
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
+  width: 100%;
   align-items: center;
   text-align: center;
   /* position: absolute; */

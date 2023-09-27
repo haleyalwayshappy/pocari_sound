@@ -437,7 +437,7 @@ section {
 
 .price-table{
   width : 100%;
-  padding:20px 40px;
+  padding:20px 20px;
 
 }
 .price-table th, .price-table td{
@@ -795,11 +795,11 @@ iframe{
   margin: 10px 0 20px 0 ;
 }
 
-/* .sub-container {
+.sub-container {
   margin:20px 10px;
   border: 4px solid #2DA5E1;
   border-radius: 10px;
-} */
+}
 
 
 .sub-container.hidden{
