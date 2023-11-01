@@ -218,7 +218,6 @@ tr,th,td {
 /* SECTION CONTAINER */
 .section-container {
   max-width: 1200px;
-  
   margin: 0 auto;
 }
 
@@ -813,4 +812,7 @@ iframe{
   display:inline-block;
 }
 
-
+.second-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
