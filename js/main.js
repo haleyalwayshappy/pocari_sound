@@ -253,3 +253,16 @@ document.getElementById('navbarService').addEventListener('click', moveTo.bind(n
 document.getElementById('navbarPrice').addEventListener('click', moveTo.bind(null, 'price'));
 document.getElementById('navbarPortfolio').addEventListener('click', moveTo.bind(null, 'portfolio'));
 document.getElementById('navbarContact').addEventListener('click', moveTo.bind(null, 'contact'));
+
+
+document.getElementById('main_more_product').addEventListener('click',movePortfolio('product'));
+document.getElementById('main_more_vlog').addEventListener('click',movePortfolio('vlog'));
+document.getElementById('main_more_enterprise').addEventListener('click',movePortfolio('enterprise'));
+
+
+function movePortfolio(moreName){
+  if(moreName == 'product'){
+    console.log("클릭함")
+    window.location.href = "./portfolio.html";
+  }
+}

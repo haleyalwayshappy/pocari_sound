@@ -85,3 +85,19 @@ body {
   text-align: center;
   /* position: absolute; */
 }
+
+.filterItem {
+  display: none;
+}
+
+.filterItem:nth-child(-n+4) {
+  display: block;
+}
+
+ul li {
+  display: none;
+}
+
+ul li:nth-child(-n+4) {
+  display: list-item;
+}
