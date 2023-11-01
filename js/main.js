@@ -1,3 +1,5 @@
+"use strict";
+
 /*HEADER*/
 window.onload = function () {
   scrollFunction()

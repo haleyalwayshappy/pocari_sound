@@ -624,7 +624,7 @@ section {
   
 }
 
-#portfolioModal>.container> img {
+/* #portfolioModal>.container> img {
   width: calc(100%-40px);
   padding: 20px;
 }
@@ -633,7 +633,7 @@ section {
   #portfolioModal>.container>img {
     max-width: 500px;
   }
-}
+} */
 
 #portfolioModal>.container>.modal-main {
   position: relative;
@@ -656,20 +656,22 @@ section {
 }
 
 #portfolioModal>.container>.modal-text img {
-width:80%;
-overflow: hidden;
+  width:80%;
+  overflow: hidden;
 }
 
-
-iframe{
-  width: 100%;
+#portfolioModal > .container > .modal-video {
+  width: 100vh; /* 혹은 원하는 퍼센트 또는 픽셀 값 */
 }
-/* @media (max-width: 768px) {
-  #porfolioModa >.container {
-    width: 100%; 
+
+@media (max-width: 768px) {
+  #portfolioModal > .container > .modal-video {
+    width: 30vh; /* 혹은 원하는 퍼센트 또는 픽셀 값 */
   }
-} 
-*/
+  
+
+}
+
 
   /* contact area */
 

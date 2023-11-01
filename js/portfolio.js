@@ -1,3 +1,5 @@
+"use strict";
+
 /*HEADER*/
 window.onload = function () {
   scrollFunction()
@@ -127,25 +129,25 @@ document.getElementById('toggleBtn').addEventListener('click', menuToggle);
     document.getElementById('sub-product').style.display = 'block';
     document.getElementById('sub-vlog').style.display = 'block';
     resetSubCategories();
-  });
+  }, { passive: true });
 
   document.getElementById('enterprise').addEventListener('click', function() {
     filterSelection('enterprise');
     showSubCategory('enterprise');
     // hideSubCategories();
-  });
+  }, { passive: true });
   
   document.getElementById('product').addEventListener('click', function() {
     filterSelection('product');
     showSubCategory('product');
     // hideSubCategories();
-  });
+  }, { passive: true });
   
   document.getElementById('vlog').addEventListener('click', function() {
     filterSelection('vlog');
     showSubCategory('vlog');
     // hideSubCategories();
-  });
+  }, { passive: true });
   
   
   
@@ -153,19 +155,19 @@ document.getElementById('toggleBtn').addEventListener('click', menuToggle);
     filterSelection('enterprise');
     showSubCategory('enterprise');
     hideSubCategories();
-  });
+  }, { passive: true });
   
   document.getElementById('more_product').addEventListener('click', function() {
     filterSelection('product');
     showSubCategory('product');
     hideSubCategories();
-  });
+  }, { passive: true });
   
   document.getElementById('more_vlog').addEventListener('click', function() {
     filterSelection('vlog');
     showSubCategory('vlog');
     hideSubCategories();
-  });
+  }, { passive: true });
   
 
 
@@ -185,7 +187,6 @@ function viewPortfolio(event) {
   var subNode = mainNode.nextElementSibling;
   var textNode = subNode.nextElementSibling;
 
-  console.log(imageNode);
 
   // document.getElementById('modalImage').src= imageNode.src;
   document.getElementById('modalMain').innerHTML = mainNode.innerHTML;
@@ -197,15 +198,14 @@ function viewPortfolio(event) {
 
 document.getElementById('modalClose').addEventListener('click',function(){
   document.getElementById('portfolioModal').style.display='none';
-});
+}, { passive: true });
 
 
 var filterItems = document.getElementsByClassName('overlay');
 
 for (var i = 0; i < filterItems.length; i++) {
-  filterItems[i].addEventListener('click', viewPortfolio);
+  filterItems[i].addEventListener('click', viewPortfolio, { passive: true });
 }
-
 
 
 window.onload = function() {
