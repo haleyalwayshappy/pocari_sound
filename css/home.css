@@ -532,6 +532,10 @@ section {
     height: 300px;
   }
 }
+.filterItem:nth-child(n+5) {
+  display: none;
+}
+
 
 .portfolio-area>.container>.sub-container>.filterItem>.image>.overlay {
   position: absolute;
