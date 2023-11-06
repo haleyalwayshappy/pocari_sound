@@ -399,9 +399,7 @@ section {
   text-align: center;
 }
 
-.contents ::after {
-  /*옆에 구분선 만들어주기 */
-}
+
 .contents p{
   font-weight: bold;
   font-size: 32px;
@@ -503,7 +501,6 @@ section {
   display: none;
   width: calc(100%-40px);
   margin:0  10px;
-  text-align: center;
 }
 
 @media (min-width: 992px) {
@@ -521,8 +518,9 @@ section {
 }
 
 .portfolio-area>.container>.sub-container>.filterItem>.image {
-  position: relative;
-  max-height: 700px;
+  position:relative;
+  width : 100%;
+
 }
 
 @media (min-width: 992px) {
@@ -563,9 +561,9 @@ section {
   font-size: 48px;
 }
 
-.portfolio-area>.container>.sub-container>.filterItem>.image>img {
+/* .portfolio-area>.container>.sub-container>.filterItem>.image>img {
   border-radius: 5px;
-}
+} */
 
 .portfolio-area>.container>.sub-container>.filterItem>.video {
   display: none;
@@ -617,30 +615,33 @@ section {
   color: #bbb;
 }
 
-#portfolioModal>.container {
+/* #portfolioModal>.container {
   width: 100%;
   height: auto;
   overflow:hidden;
   
-}
-
-/* #portfolioModal>.container> img {
-  width: calc(100%-40px);
-  padding: 20px;
-}
-
-@media (min-width: 992px) {
-  #portfolioModal>.container>img {
-    max-width: 500px;
-  }
 } */
 
+#portfolioModal>.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* 가로축(center)을 기준으로 중앙 정렬 */
+  align-items: center; /* 세로축(center)을 기준으로 중앙 정렬 */
+  height: 60%; 
+  overflow: hidden;  
+}
+
+
 #portfolioModal>.container>.modal-main {
-  position: relative;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  padding: 10px 0;
+  display: flex;        /* Flexbox 레이아웃을 활성화 */
+  justify-content: center; /* 가로 축(center)을 기준으로 중앙 정렬 */
+  align-items: center;     /* 세로 축(center)을 기준으로 중앙 정렬 */
+}
+@media (max-width: 768px) {
+  #portfolioModal > .container > .modal-main > iframe {
+    align-items:center;
+    width: 30vh; /* 혹은 원하는 퍼센트 또는 픽셀 값 */
+  }
 }
 
 #portfolioModal>.container>.modal-sub {
@@ -661,12 +662,15 @@ section {
 }
 
 #portfolioModal > .container > .modal-video {
-  width: 100vh; /* 혹은 원하는 퍼센트 또는 픽셀 값 */
+  width: 80vh; /* 혹은 원하는 퍼센트 또는 픽셀 값 */
+  height: auto;
+  align-items:center;
 }
 
 @media (max-width: 768px) {
   #portfolioModal > .container > .modal-video {
-    width: 30vh; /* 혹은 원하는 퍼센트 또는 픽셀 값 */
+    align-items:center;
+    width: 20%; /* 혹은 원하는 퍼센트 또는 픽셀 값 */
   }
   
 

@@ -198,6 +198,12 @@ function viewPortfolio(event) {
 
 document.getElementById('modalClose').addEventListener('click',function(){
   document.getElementById('portfolioModal').style.display='none';
+    // 모달 내의 모든 iframe을 찾아서 각각의 src 속성을 재설정합니다.
+    var iframes = document.getElementById('portfolioModal').querySelectorAll('iframe');
+    iframes.forEach(function(iframe) {
+      var iframeSrc = iframe.src;
+      iframe.src = iframeSrc; // src 속성을 재설정하면 iframe이 새로고침됩니다.
+    });
 }, { passive: true });
 
 
@@ -215,3 +221,5 @@ window.onload = function() {
     filterSelection(category);
   }
 };
+
+
