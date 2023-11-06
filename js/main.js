@@ -111,41 +111,24 @@ document.getElementById('seventhDot').addEventListener('click', currentImageSlid
     addClass(document.getElementById(id), 'active');
   
     if (id === 'all') {
-      let categories = {};
-  
       for (i = 0; i < filterItem.length; i++) {
         removeClass(filterItem[i], 'show');
-        filterItem[i].style.display = 'none'; // 우선 모두 숨김 처리
-  
-        filterItem[i].classList.forEach(className => {
-          if (className !== 'filterItem' && className !== 'listItem') {
-            categories[className] = (categories[className] || 0) + 1;
-  
-            if (categories[className] <= 4) {
-              addClass(filterItem[i], 'show');
-              filterItem[i].style.display = ''; // 기존 스타일로 복원
-            }
-          }
-        });
+        addClass(filterItem[i], 'show'); // 모든 filterItem을 show로 설정
+        filterItem[i].style.display = ''; // 기존 스타일로 복원
       }
     } else {
-      for (i = 0, count = 0; i < filterItem.length; i++) {
+      for (i = 0; i < filterItem.length; i++) {
         removeClass(filterItem[i], 'show');
-        filterItem[i].style.display = ''; // 기존 스타일로 복원
-    
         if (filterItem[i].classList.contains(id)) {
-          if (count < 4) {
-            addClass(filterItem[i], 'show');
-            count++;
-          } else {
-            filterItem[i].style.display = 'none'; // 5번째부터 숨김 처리
-          }
+          addClass(filterItem[i], 'show');
+          filterItem[i].style.display = ''; // 선택된 카테고리의 요소만 표시
         } else {
-          filterItem[i].style.display = 'none'; // 해당 카테고리가 아닌 경우 숨김 처리
+          filterItem[i].style.display = 'none'; // 나머지는 숨김 처리
         }
       }
     }
   }
+  
   
   function addClass(element, name) {
     var arr = element.className.split(" ");
@@ -182,6 +165,7 @@ document.getElementById('seventhDot').addEventListener('click', currentImageSlid
   
   document.getElementById('product').addEventListener('click', function(){
     filterSelection('product');
+    console.log("제품 홍보 클릭");
     document.getElementById('sub-enterprise').style.display = 'none';
     document.getElementById('sub-product').style.display = 'block';
     document.getElementById('sub-vlog').style.display = 'none';
