@@ -27,6 +27,15 @@ body {
   -moz-box-sizing: border-box;
   word-break: break-all;
   font-family: "Noto Sans KR", sans-serif;
+
+}
+.back-gray {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: gainsboro;
+  opacity: 1;
+
 }
 
 img {
@@ -219,6 +228,7 @@ tr,th,td {
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: white;
 }
 
 /* WELCOME AREA */
@@ -368,11 +378,46 @@ section {
 
 }
 
+/* .for-background{
+  position: relative;
+  height: auto;
+  z-index: 1;
+
+}
+.for-background::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../asset/mainpage_back.jpg");
+  background-size: cover;
+  opacity: 0.3; /* 원하는 투명도로 조정하세요. 여기서는 30%로 설정했습니다. */
+  z-index: -1;
+
+} */
 
 /* service area */
-.about-area{
+.about-area {
+  position: relative;
   height: auto;
+  z-index: 1;
 }
+
+/* .about-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../asset/mainpage_back.jpg");
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+} */
+
 .about-area .icon{
   width: 40%; /* 아이콘의 너비를 50%로 설정 */
   height: auto; /* 높이는 자동으로 조정 (비율 유지) */
@@ -450,9 +495,11 @@ section {
 }
 
 .price-table th{
+  font-size: 15px;
   background-color: var(--blue); /*목록 색상 */
 }
 .price-table td{
+  font-size: 15px;
   padding: 10px 20px;
 }
 
