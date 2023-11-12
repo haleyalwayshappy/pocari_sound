@@ -387,11 +387,11 @@ section {
 
 .contents{
   width: 280px;
-  height :400px;
+  height :320px;
   /* background-color: lightblue; */
   color:#333;
   font-size:14px;
-  margin :20px;
+  margin :15px;
   padding: 8px; 
   display: flex;
   flex-direction: column;
@@ -405,10 +405,17 @@ section {
   font-size: 32px;
   align-items: center;
   text-align: center;
+  color:#333;
 }
+
+.contents-title{
+  padding-bottom: 20px;
+}
+
 
 .text .details{
   font-weight: normal;
+ 
   font-size: 22px;
 }
 
@@ -753,14 +760,15 @@ section {
   color: #333;
 }
 
-.footer-area>.sns>.item>a>i {
+.footer-area>.sns>.item>a {
   font-size: 24px;
 }
 
 .footer-area>.info>p {
   font-size: 16px;
-  padding: 10px 0;
+  padding: 5px 0;
 }
+
 
 
 /*추가*/
@@ -847,6 +855,6 @@ section {
   display: none;
 }
 
-.text{
+.filterItem.text{
   display: none;
 }
