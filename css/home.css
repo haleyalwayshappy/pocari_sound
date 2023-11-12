@@ -648,11 +648,13 @@ section {
   font-size: 20px;
   color: white;
   padding: 10px 0;
+  display: none;
 }
 
 #portfolioModal>.container>.modal-text {
   font-size: 16px;
   color: #bbb;
+  display: none;
 
 }
 
@@ -821,4 +823,30 @@ section {
 .second-section {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+
+
+
+/* #sub-enterprise{
+  border: 4px solid rgba(45, 225, 75, 0.74);
+
+}
+#sub-product{
+  border: 4px solid #2DA5E1;
+
+}
+#sub-vlog{
+  border: 4px solid #e1c02d;
+
+} */
+
+
+
+.sub{
+  display: none;
+}
+
+.text{
+  display: none;
 }

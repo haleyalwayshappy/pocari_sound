@@ -207,5 +207,18 @@ document.getElementById('modalClose').addEventListener('click',function(){
 }, { passive: true });
 
 
-    filterSelection(category);
+var filterItems = document.getElementsByClassName('overlay');
 
+for (var i = 0; i < filterItems.length; i++) {
+  filterItems[i].addEventListener('click', viewPortfolio);
+}
+
+
+
+// window.onload = function() {
+//   var urlParams = new URLSearchParams(window.location.search);
+//   var category = urlParams.get('category');
+//   if (category) {
+//     filterSelection(category);
+//   }
+// };
