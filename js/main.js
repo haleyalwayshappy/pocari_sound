@@ -243,7 +243,7 @@ document.getElementById('navbarHome').addEventListener('click', moveTo.bind(null
 document.getElementById('navbarService').addEventListener('click', moveTo.bind(null, 'service'));
 document.getElementById('navbarPrice').addEventListener('click', moveTo.bind(null, 'price'));
 document.getElementById('navbarPortfolio').addEventListener('click', moveTo.bind(null, 'portfolio'));
-document.getElementById('navbarContact').addEventListener('click', moveTo.bind(null, 'contact'));
+// document.getElementById('navbarContact').addEventListener('click', moveTo.bind(null, 'contact'));
 
 
 /** 포트폴리오 더보기 눌렀을때  */
